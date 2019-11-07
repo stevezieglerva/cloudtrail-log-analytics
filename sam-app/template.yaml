@@ -10,16 +10,15 @@ Description: >
       Elasticsearch Domain: Create Elasticsearch Domain to hold the CloudTrail logs for advanced analytics
       Lambda Function:  Create Function which get's triggered when SNS receives notification, reads the contents from s3 and stores them in Elasticsearch Domain
 
-    Last Modified: 22nd November 2017
-    Author: Kuldeep Chowhan <kchowhan@expedia.com>
+    Author: See fork
 Outputs:
 
     S3Bucket:
       Description: "S3 Bucket Name where CloudTrail Logs are delivered"
       Value: !Ref S3Bucket
-##    LambdaFunction:
-##      Description: "Lambda Function that reads CloudTrail logs and stores them into Elasticsearch Domain"
-##      Value: !GetAtt Function.Arn
+    LambdaFunction:
+      Description: "Lambda Function that reads CloudTrail logs and stores them into Elasticsearch Domain"
+      Value: !GetAtt IndexEventsFunction.Arn
 ##    ElasticsearchUrl:
 ##      Description: "Elasticsearch Domain Endpoint that you can use to access the CloudTrail logs and analyze them"
 ##      Value: !GetAtt ElasticsearchDomain.DomainEndpoint
@@ -142,3 +141,8 @@ Resources:
       CodeUri: index-events/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Events:
+        SNSEvent:
+          Type: SNS
+          Properties:
+            Topic: !Ref SNSTopic
