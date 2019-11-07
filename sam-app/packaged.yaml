@@ -1,0 +1,76 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "\nThis SAM example creates the following resources:\n\n  S3 Bucket:\
+  \ S3 Bucket to hold the CloudTrail Logs\n  CloudTrail: Create CloudTrail trail for\
+  \ all regions and configures it to delivery logs to the above S3 Bucket\n  SNS Topic:\
+  \ Configure SNS topic to receive notifications when the CloudTrail log file is created\
+  \ in s3\n  Elasticsearch Domain: Create Elasticsearch Domain to hold the CloudTrail\
+  \ logs for advanced analytics\n  Lambda Function:  Create Function which get's triggered\
+  \ when SNS receives notification, reads the contents from s3 and stores them in\
+  \ Elasticsearch Domain\n\nLast Modified: 22nd November 2017 Author: Kuldeep Chowhan\
+  \ <kchowhan@expedia.com>\n"
+Outputs:
+  S3Bucket:
+    Description: S3 Bucket Name where CloudTrail Logs are delivered
+    Value:
+      Ref: S3Bucket
+Resources:
+  CloudTrail:
+    DependsOn:
+    - SNSTopicPolicy
+    - S3BucketPolicy
+    Properties:
+      EnableLogFileValidation: true
+      IncludeGlobalServiceEvents: true
+      IsLogging: true
+      IsMultiRegionTrail: true
+      S3BucketName:
+        Ref: S3Bucket
+      SnsTopicName:
+        Fn::GetAtt:
+        - SNSTopic
+        - TopicName
+    Type: AWS::CloudTrail::Trail
+  S3Bucket:
+    Type: AWS::S3::Bucket
+  S3BucketPolicy:
+    Properties:
+      Bucket:
+        Ref: S3Bucket
+      PolicyDocument:
+        Statement:
+        - Action: s3:GetBucketAcl
+          Effect: Allow
+          Principal:
+            Service: cloudtrail.amazonaws.com
+          Resource:
+            Fn::Sub: arn:aws:s3:::${S3Bucket}
+          Sid: AWSCloudTrailAclCheck
+        - Action: s3:PutObject
+          Condition:
+            StringEquals:
+              s3:x-amz-acl: bucket-owner-full-control
+          Effect: Allow
+          Principal:
+            Service: cloudtrail.amazonaws.com
+          Resource:
+            Fn::Sub: arn:aws:s3:::${S3Bucket}/AWSLogs/${AWS::AccountId}/*
+          Sid: AWSCloudTrailWrite
+        Version: '2012-10-17'
+    Type: AWS::S3::BucketPolicy
+  SNSTopic:
+    Type: AWS::SNS::Topic
+  SNSTopicPolicy:
+    Properties:
+      PolicyDocument:
+        Statement:
+        - Action: SNS:Publish
+          Effect: Allow
+          Principal:
+            Service: cloudtrail.amazonaws.com
+          Resource: '*'
+          Sid: AWSCloudTrailSNSPolicy
+        Version: '2008-10-17'
+      Topics:
+      - Ref: SNSTopic
+    Type: AWS::SNS::TopicPolicy
+Transform: AWS::Serverless-2016-10-31

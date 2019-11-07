@@ -17,12 +17,12 @@ Outputs:
     S3Bucket:
       Description: "S3 Bucket Name where CloudTrail Logs are delivered"
       Value: !Ref S3Bucket
-    LambdaFunction:
-      Description: "Lambda Function that reads CloudTrail logs and stores them into Elasticsearch Domain"
-      Value: !GetAtt Function.Arn
-    ElasticsearchUrl:
-      Description: "Elasticsearch Domain Endpoint that you can use to access the CloudTrail logs and analyze them"
-      Value: !GetAtt ElasticsearchDomain.DomainEndpoint
+##    LambdaFunction:
+##      Description: "Lambda Function that reads CloudTrail logs and stores them into Elasticsearch Domain"
+##      Value: !GetAtt Function.Arn
+##    ElasticsearchUrl:
+##      Description: "Elasticsearch Domain Endpoint that you can use to access the CloudTrail logs and analyze them"
+##      Value: !GetAtt ElasticsearchDomain.DomainEndpoint
 Resources:
   SNSTopic:
     Type: AWS::SNS::Topic
@@ -88,51 +88,57 @@ Resources:
         EnableLogFileValidation: true
         IncludeGlobalServiceEvents: true
         IsMultiRegionTrail: true
-  ElasticsearchDomain: 
-    Type: AWS::Elasticsearch::Domain
+##  ElasticsearchDomain: 
+##    Type: AWS::Elasticsearch::Domain
+##    Properties:
+##      DomainName: "cloudtrail-log-analytics"
+##      ElasticsearchClusterConfig: 
+##        InstanceCount: "2"
+##      EBSOptions: 
+##        EBSEnabled: true
+##        Iops: 0
+##        VolumeSize: 20
+##        VolumeType: "gp2"
+##      AccessPolicies: 
+##        Version: "2012-10-17"
+##        Statement: 
+##          - 
+##            Sid: "AllowESHTTPFullAccessToEveryone"
+##            Effect: "Allow"
+##            Principal: 
+##              AWS: "*"
+##            Action: "es:ESHttp*"
+##            Resource:
+##              !Sub |-
+##                arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/cloudtrail-log-analytics/*
+##      ElasticsearchVersion: "5.5"
+##  Function:
+##    Type: 'AWS::Serverless::Function'
+##    DependsOn:
+##      - ElasticsearchDomain
+##    Properties:
+##      Handler: index.handler
+##      Runtime: python3.7
+##      CodeUri: ./
+##      Policies:
+##        - ElasticsearchHttpPostPolicy:
+##            DomainName: !Ref ElasticsearchDomain
+##        - S3ReadPolicy:
+##            BucketName: !Ref S3Bucket
+##      Events:
+##        SNSEvent:
+##          Type: SNS
+##          Properties:
+##            Topic: !Ref SNSTopic
+##      Environment:
+##        Variables:
+##          es_host:
+##            Fn::GetAtt: 
+##              - ElasticsearchDomain
+##              - DomainEndpoint
+  IndexEventsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      DomainName: "cloudtrail-log-analytics"
-      ElasticsearchClusterConfig: 
-        InstanceCount: "2"
-      EBSOptions: 
-        EBSEnabled: true
-        Iops: 0
-        VolumeSize: 20
-        VolumeType: "gp2"
-      AccessPolicies: 
-        Version: "2012-10-17"
-        Statement: 
-          - 
-            Sid: "AllowESHTTPFullAccessToEveryone"
-            Effect: "Allow"
-            Principal: 
-              AWS: "*"
-            Action: "es:ESHttp*"
-            Resource:
-              !Sub |-
-                arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/cloudtrail-log-analytics/*
-      ElasticsearchVersion: "5.5"
-  Function:
-    Type: 'AWS::Serverless::Function'
-    DependsOn:
-      - ElasticsearchDomain
-    Properties:
-      Handler: index.handler
+      CodeUri: index-events/
+      Handler: app.lambda_handler
       Runtime: python3.7
-      CodeUri: ./
-      Policies:
-        - ElasticsearchHttpPostPolicy:
-            DomainName: !Ref ElasticsearchDomain
-        - S3ReadPolicy:
-            BucketName: !Ref S3Bucket
-      Events:
-        SNSEvent:
-          Type: SNS
-          Properties:
-            Topic: !Ref SNSTopic
-      Environment:
-        Variables:
-          es_host:
-            Fn::GetAtt: 
-              - ElasticsearchDomain
-              - DomainEndpoint
