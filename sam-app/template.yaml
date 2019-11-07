@@ -118,7 +118,7 @@ Resources:
       - ElasticsearchDomain
     Properties:
       Handler: index.handler
-      Runtime: python2.7
+      Runtime: python3.7
       CodeUri: ./
       Policies:
         - ElasticsearchHttpPostPolicy:
