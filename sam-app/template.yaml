@@ -42,6 +42,10 @@ Resources:
             Action: "SNS:Publish"
   S3Bucket:
     Type: AWS::S3::Bucket
+    Tags: 
+      - 
+        Key: "type"
+        Value: "cloudtrail"
   S3BucketPolicy: 
     Type: "AWS::S3::BucketPolicy"
     Properties: 
@@ -141,6 +145,8 @@ Resources:
       CodeUri: index-events/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Tags:
+        type: "cloudtrail"
       Events:
         SNSEvent:
           Type: SNS
