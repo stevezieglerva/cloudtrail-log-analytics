@@ -1,0 +1,23 @@
+version: 0.2
+
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+       - echo "Installing ..."
+       - export ACCOUNTID=`aws sts get-caller-identity --query Account --output text`
+       - printenv
+
+
+  build:
+    commands:
+        - cd sam-app
+
+        - sam validate -t template.yaml
+        - sam build
+        - sam package --output-template-file packaged.yaml --s3-bucket svz-sam
+        - sam deploy --template-file packaged.yaml --stack-name cloudtrail-log-analytics --capabilities CAPABILITY_IAM --parameter-overrides ESDomain=$ES_DOMAIN ESFullDomain=$ES_PATH
+        - aws cloudformation describe-stacks --stack-name cloudtrail-log-analytics --query 'Stacks[].Outputs' --output table
+

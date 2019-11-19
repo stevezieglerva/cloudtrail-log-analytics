@@ -1,0 +1,282 @@
+{
+    "awsAccountId": "112280397275",
+    "digestStartTime": "2019-11-08T15:49:11Z",
+    "digestEndTime": "2019-11-08T16:49:11Z",
+    "digestS3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+    "digestS3Object": "AWSLogs/112280397275/CloudTrail-Digest/us-east-1/2019/11/08/112280397275_CloudTrail-Digest_us-east-1_cloudtrail-log-analytics-CloudTrail-1KU5PJNR4T9HG_us-east-1_20191108T164911Z.json.gz",
+    "digestPublicKeyFingerprint": "797c895fcb81f896b1cb9573fb07f269",
+    "digestSignatureAlgorithm": "SHA256withRSA",
+    "newestEventTime": "2019-11-08T16:44:41Z",
+    "oldestEventTime": "2019-11-08T14:09:10Z",
+    "previousDigestS3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+    "previousDigestS3Object": "AWSLogs/112280397275/CloudTrail-Digest/us-east-1/2019/11/08/112280397275_CloudTrail-Digest_us-east-1_cloudtrail-log-analytics-CloudTrail-1KU5PJNR4T9HG_us-east-1_20191108T154911Z.json.gz",
+    "previousDigestHashValue": "6332d75cc985c81b320e749880ea119c375ef2e1904a15b27b9df7b5e7de9b1b",
+    "previousDigestHashAlgorithm": "SHA-256",
+    "previousDigestSignature": "1483bba59c05abbe3c8bbfbfe2fd053bd0ae19792f27b862aad9871292349eb6b2a39a9deb9b3a38801fc5dbac0912b3a9cc453c470a248432d10fb7909ebad433ac0829c9cd4d975f3f9cd17e56a60134ddfd29e7fba0aed878a6cab11259ed34355dabf864bc1b69a6478f66093d87e47346f3cb97387dfe17b6cacf7f1a7eecbc66b46c5fe237a92bbd63db975505995e8375a81416b983d65a566cd58d9baf9605321e93a2b2be2833397d45de2e048c3b720f212d4a7dd5afeb177c77ab336abca1a494c45d65d0710a0d9e90e9c19f74628f23d63c851335ee7a805abae1a74519d76c7727329d4bc91451163df4a62db5b67c294ecb27e5fcec1b6f8f",
+    "logFiles": [
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1630Z_GcUQtshv6aPESe8e.json.gz",
+            "hashValue": "a48c95cf52e489279450304968de4ae29a107a0091204756110149c9ffd63edc",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:28:39Z",
+            "oldestEventTime": "2019-11-08T16:25:38Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1615Z_75yKovJmjiI2hP9l.json.gz",
+            "hashValue": "e67d5c5d758be4c5a7925cf6e172e8a809bab210c0219a7b397f296dc58bb669",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:12:37Z",
+            "oldestEventTime": "2019-11-08T15:54:37Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_YV2OyEogYz4NW2TM.json.gz",
+            "hashValue": "33472570c6714a00ca93639cd8f0e1cc374890611dee895721ccf08b3ba8105a",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:32:39Z",
+            "oldestEventTime": "2019-11-08T15:57:28Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1555Z_RyVrcRz8Du0lDwHO.json.gz",
+            "hashValue": "e1af2aa5fc4cf95d89fb2adef22f1bc3876ca20b8678254be524a11073d2dae9",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:50:34Z",
+            "oldestEventTime": "2019-11-08T15:48:34Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1555Z_L95GErkVX8vejlhP.json.gz",
+            "hashValue": "41dc5912136103b4248f86f7561ec922254558a5ce1e315af872e1570588ce30",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:51:34Z",
+            "oldestEventTime": "2019-11-08T14:42:36Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1600Z_Ji2uZNTeox4Uajb1.json.gz",
+            "hashValue": "1c77b6bc8657ab1192800e17477770b7a031eab71e25ef9a18ab600166f35ccf",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:58:35Z",
+            "oldestEventTime": "2019-11-08T15:58:25Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1620Z_x6gSD2NurSO7GgLY.json.gz",
+            "hashValue": "ef01f795e3c23e18045151f15497e1677e2faa5728751857c1631707ca65a7d5",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:19:38Z",
+            "oldestEventTime": "2019-11-08T16:05:06Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1640Z_KihukaXunxoDc7IC.json.gz",
+            "hashValue": "ca7576db53f5d28c2ef6fb16a8afbc306fc8471061f270f816b09e02fe15017a",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:37:40Z",
+            "oldestEventTime": "2019-11-08T16:35:38Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1605Z_Hs4cPOdpFKB6fGIG.json.gz",
+            "hashValue": "cc3b9e5bfe776864e78ef4d8d3e8201db7070d20e6f789c6c83c7dd850a4a168",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:00:56Z",
+            "oldestEventTime": "2019-11-08T16:00:32Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1625Z_c8ndyrisCgJCiB7B.json.gz",
+            "hashValue": "8a4556bf1cd7f8d21c013d451761b3274c5cc9cdf5f8510876b2d2f7d0c0737f",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:24:38Z",
+            "oldestEventTime": "2019-11-08T16:15:43Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1555Z_Yoi603ljQyTBM5Jh.json.gz",
+            "hashValue": "40a9e83794805dc9f1ccd1467cdc562291f273065a69f9153495fdb1d66634ef",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:52:35Z",
+            "oldestEventTime": "2019-11-08T14:09:10Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_rpmkdP78W2TZ2Vwf.json.gz",
+            "hashValue": "ee8ecb93631740cd936de7129265ba68dae022c226d1daf9e49052ab8ecae565",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:31:39Z",
+            "oldestEventTime": "2019-11-08T16:20:40Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1615Z_2Mw10JnkonAXLaXY.json.gz",
+            "hashValue": "a9f1946dab18e2d70ed4bc1c4f51fc07d25471da0d9e56125a66a14652ba3500",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:13:37Z",
+            "oldestEventTime": "2019-11-08T16:09:36Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1605Z_CRYpahRKUYDA7Xd0.json.gz",
+            "hashValue": "bc9fe606c906f9dd9d411ba6ab70843caa0df3cc9b2d894e8d5359a61be1bb71",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:03:36Z",
+            "oldestEventTime": "2019-11-08T14:21:17Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1640Z_bP3tZH928oj2VXdp.json.gz",
+            "hashValue": "8056c18c79fa7431df2b997a3361c52ebc385e76c01e9bb0acf372a2860cbc06",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:38:40Z",
+            "oldestEventTime": "2019-11-08T16:31:06Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1645Z_EaczgFTYxmQV6vWI.json.gz",
+            "hashValue": "c64ada2f7b63efba37c8562f195c3d31c7920657a368c7bfa553b08ebd262ca7",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:44:41Z",
+            "oldestEventTime": "2019-11-08T16:39:40Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1600Z_vSmuZs0MYjsI0y98.json.gz",
+            "hashValue": "1288df67636710b620e461689409ae8caba096afd834a06cdf73cecf896972c1",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:57:35Z",
+            "oldestEventTime": "2019-11-08T15:47:20Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1625Z_gwE9Z7TLDBVmc97A.json.gz",
+            "hashValue": "a86243a48483a6436fac82084f43fe8ebdea5e6dd15d51fe63195de814717694",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:21:38Z",
+            "oldestEventTime": "2019-11-08T16:04:08Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1610Z_J1gPUyXG587HrNfu.json.gz",
+            "hashValue": "23f41b0889a556e938f4aa3a04fe6b3cb83e3b671354fa543c85bac4a06ae4ae",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:08:36Z",
+            "oldestEventTime": "2019-11-08T15:58:47Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_L7unoN8Iv7aDinm3.json.gz",
+            "hashValue": "2d32a112b12007a06676bd4cddc3b8b32c63e84ad8aa9bf203e30682e288fc89",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:31:14Z",
+            "oldestEventTime": "2019-11-08T16:29:39Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_UVUsSFRhIJCqbf3l.json.gz",
+            "hashValue": "9acbe29fdae50c5e11295872d2750662f0ac40c457ad69d2c0345f139a6dccdf",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:34:34Z",
+            "oldestEventTime": "2019-11-08T16:33:53Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_SMJyqpSWDjYKg77F.json.gz",
+            "hashValue": "634fb3437296adff4b4305fb45245da53c9dec224671b687ef1788365b0fe5de",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:33:17Z",
+            "oldestEventTime": "2019-11-08T16:32:46Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1625Z_TrWpDUe5rt1IpT56.json.gz",
+            "hashValue": "964e47385222d7b2f3e5550e5c6ef252b1e321eab10c9b6a47fa3315eeccc977",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:21:57Z",
+            "oldestEventTime": "2019-11-08T16:21:57Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1605Z_w4e1518PS2KOHJaT.json.gz",
+            "hashValue": "2783d5626883780872b90ef5e18427e82f0fb8c7ff2ea3bb84cd91694cfdadea",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:04:48Z",
+            "oldestEventTime": "2019-11-08T16:04:48Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1605Z_1nvh4oIiXCSjGC39.json.gz",
+            "hashValue": "1113afc119118adeeae49383819b137968a633ad86880c9e0faff30c1cf2bd5e",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:00:56Z",
+            "oldestEventTime": "2019-11-08T16:00:32Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1600Z_ss2iD5M0dLwXDpvK.json.gz",
+            "hashValue": "84d72fc221b2909466b91a625c94cde1037a07ba83310b7861ca9f11085a93c0",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:56:42Z",
+            "oldestEventTime": "2019-11-08T15:56:42Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1600Z_n8PKwjhIugagbJyU.json.gz",
+            "hashValue": "fe298d4040dac9751465e1379ba203fd4750f4308ff366d6948b6e37d86fc8e9",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:56:42Z",
+            "oldestEventTime": "2019-11-08T15:56:42Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1555Z_Ksa0dDIyq8Vdmhiq.json.gz",
+            "hashValue": "c2590f0dc84225abadd267733dd95027eac4c59b87f2fd45e1cb3b8dda435fcf",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T15:51:53Z",
+            "oldestEventTime": "2019-11-08T15:51:53Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1625Z_bq5mRLgAo2DtIJGO.json.gz",
+            "hashValue": "9a2b82834098e050e4cbedd1264f89451e4bf35777e2e848f3e64eb450d1c2c0",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:20:02Z",
+            "oldestEventTime": "2019-11-08T16:20:02Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_rIRSMdK9sp9d4Yo6.json.gz",
+            "hashValue": "0672cb318fb8bfdede699724c9c28c1a6676fa0ef3e128360a2b9d199b3126c8",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:31:44Z",
+            "oldestEventTime": "2019-11-08T16:30:58Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1635Z_tthQO3ZjVIIk3sw2.json.gz",
+            "hashValue": "9bf76f24c35b2e1d7e775c96e76ad5524291c70c87ac63140b63970d278f6bff",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:34:34Z",
+            "oldestEventTime": "2019-11-08T16:32:47Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1620Z_5phskWLpOnYKX2RX.json.gz",
+            "hashValue": "1165cae0aa1757105ce693f371033354bc21b8c9a185fbbcd5572ae9bcbf995d",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:19:33Z",
+            "oldestEventTime": "2019-11-08T16:19:33Z"
+        },
+        {
+            "s3Bucket": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+            "s3Object": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/08/112280397275_CloudTrail_us-east-1_20191108T1630Z_yEUMP08JPqstC6jw.json.gz",
+            "hashValue": "33a5425787d8c56df77f2b667d123998ef3b60c88442b30e0a3e0af72bbd2d3c",
+            "hashAlgorithm": "SHA-256",
+            "newestEventTime": "2019-11-08T16:29:18Z",
+            "oldestEventTime": "2019-11-08T16:29:18Z"
+        }
+    ]
+}

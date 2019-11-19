@@ -1,0 +1,73 @@
+{
+  "_index": "ct-2019-11-09",
+  "_type": "record",
+  "_id": "WWybUW4B-6zaZ91RGrnR",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "eventVersion": "1.05",
+    "userIdentity": {
+      "type": "AWSService",
+      "invokedBy": "cloudtrail.amazonaws.com"
+    },
+    "eventTime": "2019-11-09T19:18:45Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "PutObject",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "cloudtrail.amazonaws.com",
+    "userAgent": "cloudtrail.amazonaws.com",
+    "requestParameters": {
+      "bucketName": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte",
+      "Host": "cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte.s3.amazonaws.com",
+      "x-amz-acl": "bucket-owner-full-control",
+      "x-amz-server-side-encryption": "AES256",
+      "key": "AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/09/112280397275_CloudTrail_us-east-1_20191109T1915Z_70IaedJDSUJDc2Tu.json.gz"
+    },
+    "responseElements": {
+      "x-amz-server-side-encryption": "AES256"
+    },
+    "additionalEventData": {
+      "SignatureVersion": "SigV4",
+      "CipherSuite": "ECDHE-RSA-AES128-SHA",
+      "bytesTransferredIn": 1155,
+      "SSEApplied": "SSE_S3",
+      "AuthenticationMethod": "AuthHeader",
+      "x-amz-id-2": "Br3bOkQLq7xWDXHYx27hauZaIQ16jYANu2nGL6IuvYXuA+aBrQ1GijCZAItgWIgmCJCvDR4BGVk=",
+      "bytesTransferredOut": 0
+    },
+    "requestID": "D15B2D8B187FCF71",
+    "eventID": "0a15bd1a-b1f1-44da-baf2-dd41b9e09411",
+    "readOnly": false,
+    "resources": [
+      {
+        "type": "AWS::S3::Object",
+        "ARN": "arn:aws:s3:::cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte/AWSLogs/112280397275/CloudTrail/us-east-1/2019/11/09/112280397275_CloudTrail_us-east-1_20191109T1915Z_70IaedJDSUJDc2Tu.json.gz"
+      },
+      {
+        "accountId": "112280397275",
+        "type": "AWS::S3::Bucket",
+        "ARN": "arn:aws:s3:::cloudtrail-log-analytics-s3bucket-1wq1mer0z4wte"
+      }
+    ],
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "112280397275",
+    "sharedEventID": "e21b3097-3de9-4e35-a963-1690bfdc8553"
+  },
+  "fields": {
+    "eventTime": [
+      "2019-11-09T19:18:45.000Z"
+    ]
+  },
+  "highlight": {
+    "eventSource": [
+      "@kibana-highlighted-field@s3@/kibana-highlighted-field@.amazonaws.com"
+    ],
+    "resources.type": [
+      "AWS::@kibana-highlighted-field@S3@/kibana-highlighted-field@::Object",
+      "AWS::@kibana-highlighted-field@S3@/kibana-highlighted-field@::Bucket"
+    ]
+  },
+  "sort": [
+    1573327125000
+  ]
+}

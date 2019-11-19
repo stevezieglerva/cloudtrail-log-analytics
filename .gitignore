@@ -4,7 +4,7 @@
 
 *.code-workspace
 sam-app/packaged.yaml
-
+sam-app/tests/trail/**/**
 
 ### Linux ###
 *~

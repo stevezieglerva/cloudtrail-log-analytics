@@ -11,20 +11,35 @@ Description: >
       Lambda Function:  Create Function which get's triggered when SNS receives notification, reads the contents from s3 and stores them in Elasticsearch Domain
 
     Author: See fork
-Outputs:
 
+Globals:
+  Function:
+    Timeout: 900
+
+Parameters:
+  ESDomain:
+    Type: String
+    Description: "Short domain name of the target Elasticsearch index"
+  ESFullDomain:
+    Type: String
+    Description: "Full Elasticsearch domain name like 'search-...-us-east-1.es.amazonaws.com'"
+
+Outputs:
     S3Bucket:
       Description: "S3 Bucket Name where CloudTrail Logs are delivered"
       Value: !Ref S3Bucket
     LambdaFunction:
       Description: "Lambda Function that reads CloudTrail logs and stores them into Elasticsearch Domain"
       Value: !GetAtt IndexEventsFunction.Arn
-##    ElasticsearchUrl:
-##      Description: "Elasticsearch Domain Endpoint that you can use to access the CloudTrail logs and analyze them"
-##      Value: !GetAtt ElasticsearchDomain.DomainEndpoint
+
 Resources:
   SNSTopic:
     Type: AWS::SNS::Topic
+    Properties:
+      Tags: 
+        - 
+          Key: "type"
+          Value: "cloudtrail"
   SNSTopicPolicy: 
     Type: "AWS::SNS::TopicPolicy"
     Properties: 
@@ -40,12 +55,15 @@ Resources:
               Service: "cloudtrail.amazonaws.com"
             Resource: "*"
             Action: "SNS:Publish"
+
   S3Bucket:
     Type: AWS::S3::Bucket
-    Tags: 
-      - 
-        Key: "type"
-        Value: "cloudtrail"
+    Properties:
+      Tags: 
+        - 
+          Key: "type"
+          Value: "cloudtrail"
+
   S3BucketPolicy: 
     Type: "AWS::S3::BucketPolicy"
     Properties: 
@@ -75,6 +93,7 @@ Resources:
             Condition: 
               StringEquals:
                 s3:x-amz-acl: "bucket-owner-full-control"
+                
   CloudTrail:
     Type: AWS::CloudTrail::Trail
     DependsOn:
@@ -91,54 +110,16 @@ Resources:
         EnableLogFileValidation: true
         IncludeGlobalServiceEvents: true
         IsMultiRegionTrail: true
-##  ElasticsearchDomain: 
-##    Type: AWS::Elasticsearch::Domain
-##    Properties:
-##      DomainName: "cloudtrail-log-analytics"
-##      ElasticsearchClusterConfig: 
-##        InstanceCount: "2"
-##      EBSOptions: 
-##        EBSEnabled: true
-##        Iops: 0
-##        VolumeSize: 20
-##        VolumeType: "gp2"
-##      AccessPolicies: 
-##        Version: "2012-10-17"
-##        Statement: 
-##          - 
-##            Sid: "AllowESHTTPFullAccessToEveryone"
-##            Effect: "Allow"
-##            Principal: 
-##              AWS: "*"
-##            Action: "es:ESHttp*"
-##            Resource:
-##              !Sub |-
-##                arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/cloudtrail-log-analytics/*
-##      ElasticsearchVersion: "5.5"
-##  Function:
-##    Type: 'AWS::Serverless::Function'
-##    DependsOn:
-##      - ElasticsearchDomain
-##    Properties:
-##      Handler: index.handler
-##      Runtime: python3.7
-##      CodeUri: ./
-##      Policies:
-##        - ElasticsearchHttpPostPolicy:
-##            DomainName: !Ref ElasticsearchDomain
-##        - S3ReadPolicy:
-##            BucketName: !Ref S3Bucket
-##      Events:
-##        SNSEvent:
-##          Type: SNS
-##          Properties:
-##            Topic: !Ref SNSTopic
-##      Environment:
-##        Variables:
-##          es_host:
-##            Fn::GetAtt: 
-##              - ElasticsearchDomain
-##              - DomainEndpoint
+        EventSelectors:
+          - DataResources:
+              - Type: AWS::Lambda::Function
+                Values: 
+                  - arn:aws:lambda
+          - DataResources:
+              - Type: AWS::S3::Object
+                Values: 
+                  - "arn:aws:s3:::"
+
   IndexEventsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
@@ -147,8 +128,18 @@ Resources:
       Runtime: python3.7
       Tags:
         type: "cloudtrail"
+      Environment:
+        Variables:
+          ES_PATH: 
+            Ref: ESFullDomain
       Events:
         SNSEvent:
           Type: SNS
           Properties:
             Topic: !Ref SNSTopic
+      Policies:
+        - S3ReadPolicy:
+            BucketName: !Ref S3Bucket
+        - ElasticsearchHttpPostPolicy:
+            DomainName: 
+              Ref: ESDomain

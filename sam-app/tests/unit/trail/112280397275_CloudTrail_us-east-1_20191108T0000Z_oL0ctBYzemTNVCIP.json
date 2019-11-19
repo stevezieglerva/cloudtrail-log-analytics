@@ -1,0 +1,176 @@
+{
+    "Records": [
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAJ6J45YO4ULNBAXD3C",
+                "arn": "arn:aws:iam::112280397275:user/ziegler-aws",
+                "accountId": "112280397275",
+                "accessKeyId": "ASIARUJDO4XNTCGNAAX6",
+                "userName": "ziegler-aws",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-11-07T14:36:47Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-11-07T23:58:31Z",
+            "eventSource": "cloudformation.amazonaws.com",
+            "eventName": "ListStacks",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "70.63.203.163",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "stackStatusFilter": [
+                    "CREATE_IN_PROGRESS",
+                    "UPDATE_COMPLETE",
+                    "DELETE_FAILED",
+                    "REVIEW_IN_PROGRESS",
+                    "ROLLBACK_IN_PROGRESS",
+                    "UPDATE_ROLLBACK_IN_PROGRESS",
+                    "CREATE_COMPLETE",
+                    "UPDATE_ROLLBACK_COMPLETE",
+                    "UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS",
+                    "ROLLBACK_COMPLETE",
+                    "ROLLBACK_FAILED",
+                    "CREATE_FAILED",
+                    "UPDATE_ROLLBACK_FAILED",
+                    "UPDATE_COMPLETE_CLEANUP_IN_PROGRESS",
+                    "UPDATE_IN_PROGRESS",
+                    "DELETE_IN_PROGRESS",
+                    "IMPORT_COMPLETE",
+                    "IMPORT_IN_PROGRESS",
+                    "IMPORT_ROLLBACK_IN_PROGRESS",
+                    "IMPORT_ROLLBACK_FAILED",
+                    "IMPORT_ROLLBACK_COMPLETE"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "4f9d894e-8197-445d-bfb1-2304d61191f5",
+            "eventID": "e61f40b4-d3f8-49ca-8123-73e5d6c5491c",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "112280397275"
+        },
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAJ6J45YO4ULNBAXD3C",
+                "arn": "arn:aws:iam::112280397275:user/ziegler-aws",
+                "accountId": "112280397275",
+                "accessKeyId": "ASIARUJDO4XNTCGNAAX6",
+                "userName": "ziegler-aws",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-11-07T14:36:47Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-11-07T23:59:33Z",
+            "eventSource": "cloudformation.amazonaws.com",
+            "eventName": "ListStacks",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "70.63.203.163",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "stackStatusFilter": [
+                    "CREATE_IN_PROGRESS",
+                    "UPDATE_COMPLETE",
+                    "DELETE_FAILED",
+                    "REVIEW_IN_PROGRESS",
+                    "ROLLBACK_IN_PROGRESS",
+                    "UPDATE_ROLLBACK_IN_PROGRESS",
+                    "CREATE_COMPLETE",
+                    "UPDATE_ROLLBACK_COMPLETE",
+                    "UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS",
+                    "ROLLBACK_COMPLETE",
+                    "ROLLBACK_FAILED",
+                    "CREATE_FAILED",
+                    "UPDATE_ROLLBACK_FAILED",
+                    "UPDATE_COMPLETE_CLEANUP_IN_PROGRESS",
+                    "UPDATE_IN_PROGRESS",
+                    "DELETE_IN_PROGRESS",
+                    "IMPORT_COMPLETE",
+                    "IMPORT_IN_PROGRESS",
+                    "IMPORT_ROLLBACK_IN_PROGRESS",
+                    "IMPORT_ROLLBACK_FAILED",
+                    "IMPORT_ROLLBACK_COMPLETE"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "89176e4a-7ee0-4d44-9df3-ed182aa04735",
+            "eventID": "2d257b04-e4d6-4b8e-a014-38339a3ed856",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "112280397275"
+        },
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAJ6J45YO4ULNBAXD3C",
+                "arn": "arn:aws:iam::112280397275:user/ziegler-aws",
+                "accountId": "112280397275",
+                "accessKeyId": "ASIARUJDO4XNTCGNAAX6",
+                "userName": "ziegler-aws",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-11-07T14:36:47Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-11-07T23:57:31Z",
+            "eventSource": "cloudformation.amazonaws.com",
+            "eventName": "DescribeStackEvents",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "70.63.203.163",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "stackName": "arn:aws:cloudformation:us-east-1:112280397275:stack/cloudtrail-log-analytics/33348b10-017e-11ea-a1c8-0a62acea77ae"
+            },
+            "responseElements": null,
+            "requestID": "b560a54d-1ba6-49b8-85ef-a2585976a376",
+            "eventID": "fd3a8f91-fb4b-46b6-8724-41823433daa6",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "112280397275"
+        },
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAJ6J45YO4ULNBAXD3C",
+                "arn": "arn:aws:iam::112280397275:user/ziegler-aws",
+                "accountId": "112280397275",
+                "accessKeyId": "ASIARUJDO4XNTCGNAAX6",
+                "userName": "ziegler-aws",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-11-07T14:36:47Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-11-07T23:58:33Z",
+            "eventSource": "cloudformation.amazonaws.com",
+            "eventName": "DescribeStackEvents",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "70.63.203.163",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "stackName": "arn:aws:cloudformation:us-east-1:112280397275:stack/cloudtrail-log-analytics/33348b10-017e-11ea-a1c8-0a62acea77ae"
+            },
+            "responseElements": null,
+            "requestID": "b25903aa-f4e7-45ed-828b-301679e1eb2d",
+            "eventID": "7802f701-af48-4e0e-a022-10037804e159",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "112280397275"
+        }
+    ]
+}
